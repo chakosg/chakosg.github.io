@@ -1,0 +1,446 @@
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+
+        /* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+
+/* IMPORTED FONTS */
+
+@font-face {
+
+    font-family: "ultra";
+    src: url('../fonts/serif/ultra-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+
+    font-family: "roboto";
+    src: url('../fonts/sans-serif/roboto-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+
+    font-family: "lato";
+    src: url('../fonts/sans-serif/lato-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* TYPOGRAPHY */
+
+p {
+
+    font-family: roboto, Arial, sans-serif;
+    line-height: 1.25;
+    color: #2e3140;
+
+}
+
+h1, h2, h3, h4 {
+
+    font-family: lato, Helvetica, sans-serif;
+    letter-spacing: 0.0325rem;
+    color: #bcbf60;
+}
+
+h1 {
+    
+    font-size: 3rem;
+    letter-spacing: 0.25rem;
+    transform: rotate(-5deg);
+    
+}
+
+h2 {
+
+    padding-top: 2rem;
+
+}
+
+
+.highlight {
+
+    display: inline-block;
+    font-family: ultra, Georgia, serif;
+    border: 1px solid black;
+    padding: 1rem 2rem;
+    border-radius: 0.3rem 1rem;
+    color: #d7d9d8;
+    background-color: #f24464;
+    box-shadow: 5px 5px 4px -1px #f2446498;
+    -webkit-text-stroke: 0.01px #2e3140;
+
+}
+
+time {
+
+    font-style: italic;
+    color: #bcbf60;
+
+}
+
+/* GENERAL SETUP AND DEFAULTS */
+
+* {
+
+    box-sizing: border-box;
+
+}
+
+html {
+    
+    font-size:17px;
+
+}
+
+body {
+
+    margin: 1.5rem auto;
+    width:90%;
+    min-width:56.25rem;
+    background-color: whitesmoke;
+
+}
+
+/* LAYOUT */
+
+header {
+    
+    padding: 0.5rem 0rem 4rem 0rem;
+    text-align: center;
+
+}
+
+nav {
+
+    margin-top: 0.25rem;
+
+}
+
+.angle {
+
+    display: inline-block;
+    transform: rotate(5deg);
+    color: #f24464;
+    
+}
+
+footer {
+    
+    font-size: 12px;
+    margin:5rem auto 3rem auto;
+    word-spacing: 1px;
+    
+}
+
+.footer {
+
+    text-align: right;
+   
+}
+
+.copyright {
+    
+    margin: 0rem auto;
+    float: left;
+    
+}
+
+.main-section{
+
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 3rem;
+
+}
+
+article{
+
+    grid-column: 1 / 2;
+    grid-row: 1;
+
+}
+
+article p {
+
+    margin: 0rem 3rem 1.5rem 0rem;
+
+}
+
+aside{
+
+    grid-column: 2 / 3;
+    grid-row: 1;
+    border-left: 1px solid #bcbf60;
+    padding: 2.5rem;
+    margin: auto -3rem auto -2rem;
+    
+    
+}
+
+aside h3:nth-child(1) {
+
+    margin-top: -2.8rem;
+
+
+}
+
+aside p {
+
+    border-bottom: 1px solid #bcbf60;
+    padding: 0.25rem;
+
+}
+
+.expand {
+
+    display: flex;
+    font-size: 0.25rem;
+    padding: 0.5rem 0rem 2rem 0rem;
+    padding-top: 0.5rem;
+    color: #f24464;
+
+}
+
+.subsection{
+
+    display: flex;
+
+}
+
+/* IMAGES AND FIGURES */
+
+img {
+
+    width: 100%;
+    
+}
+
+figure {
+
+    margin: 0%;
+
+}
+
+.article-image {
+
+    width: 33%;
+    float: left;
+    margin-right: 0.80rem;
+
+}
+
+.subsection {
+
+    margin: 3rem auto;
+
+}
+
+.subsection figure {
+
+    margin: 0rem 0.25rem;
+    background-color: #bcbf60;
+    color: #2e3140;
+    text-align: center;
+}
+
+.subsection figure figcaption {
+
+    padding: 0.5rem 0.5rem;
+
+}
+
+/* LINKS AND NAVIGATION */
+
+
+a {
+
+    text-decoration: none;
+
+}
+
+nav {
+
+    border-top: 1px solid #bcbf60;
+    border-bottom: 1px solid #bcbf60;
+   
+}
+
+nav a {
+
+    
+    display: inline-block;
+    padding: 1.25rem 8.5rem 1.25rem 0rem;
+    font-size: 1.5rem;
+    font-family: lato, Arial, sans-serif;
+    color: #2e3140;
+
+}
+
+/* nav a:link would not change colors, after scouring the web I found this nav-position a:link result which allowed for the color to change */
+
+nav-position a:link {
+
+    color: #d7d9d8;
+
+}
+
+nav-position a:visited {
+
+    color: #f24464;
+
+}
+
+nav a:focus, nav a:hover {
+
+    transform: scale(1.1);
+    text-transform: uppercase;
+    color: #f24464;
+    
+}
+
+nav a:active {
+
+    transform: scale(1);
+    color: #f24464;
+
+}
+
+.angle:focus, .angle:hover {
+
+    display: inline-block;
+    transform: rotate(-5deg);
+    color: #bcbf60;
+    
+}
+
+.angle:active {
+
+    transform: scale(1.25);
+    color: #f24464;
+
+}
+
+.copyright a:link {
+
+    color: #f24464;
+
+}
+
+.copyright a:visited {
+
+    color: #bcbf60;
+
+}
+
+.copyright a:focus, .copyright a:hover {
+
+    transform: scale(1.25);
+    text-transform: uppercase;
+
+}
+.copyright a:active {
+
+    transform: scale(1.25);
+    text-transform: uppercase;
+    
+}
+
+.footer a:link, .footer a:visited {
+
+    color: #f24464;
+
+}
+
+
+.footer a:active {
+
+    color: #bcbf60;
+
+}
+
+button {
+
+    display: inline-block;
+    font-family: ultra, Georgia, serif;
+    letter-spacing: 0.0625rem;
+    font-size: 1.5rem;
+    border: 1px solid black;
+    padding: 1rem 2rem;
+    border-radius: 0.3rem;
+    color: #bcbf60;
+    background-color: #f24464;
+    box-shadow: 5px 5px 4px -1px #f2446498;
+    margin: auto;
+    -webkit-text-stroke: 0.75px #2e3140;
+
+}
+
+button:focus, button:hover {
+
+    color: #bcbf60;
+    background-color: #D7D9D8;
+    transform: scale(1.25);
+
+}
+
+button:active {
+
+    color: #D7D9D8;
+    background-color: #bcbf60;
+    transform: scale(1);
+    transition: 0.03125s;
+
+}
+
